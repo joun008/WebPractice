@@ -2,68 +2,46 @@
 <html lang="ko">
 
 <head>
-	<meta charset="UTF-8">
-	<title>HTML Images</title>
+    <meta charset="UTF-8">
+	<title>HTML Forms</title>
 	<style>
-		h1{text-align:center}
-		#value{color:gray;text-align:right}
-		body{text-align:center;table-align:center}
-		form{text-align:center}
-		td{text-align:center}
-		placeholder{text-align:left}
-		table{width:40%;margin:auto}
-		value{color:gray;text-align:left}
-		a:link, a:visited{ 
-			background-color: green;
-			color: maroon;
-			padding: 15px 25px;
-			text-align: center;	
-			text-decoration: none;
-			display: inline-block;
-			}
-		a:hover,a:active{background-color:  #FF4500;}
+		body{background-color:white}
+		.container{
+			background-color:white;
+		}
+		.picture{
+			width: 40%;
+			height: 60%;
+			padding :5%;
+			padding-bottom:30%;
+			border: 2px solid black;
+			margin: 5%;
+			float:left;
+		}
+		.product{
+			border: 1px solid black;
+			width: 30%;
+			height:20%;
+			padding: 3%;
+			margin :1%;
+			float:right;
+		}
+		.title{
+			border: 1px solid black;
+			width: 30%;
+			padding: 3%;
+			height:20%;
+			margin :1%;
+			float:right;
+		}
 	</style>
 </head>
-<body>
-<form action="/examples/media/request.php">
-	<h1>회원가입창</h1>
-	<div>
-	<p>아이디<br>
-	<input type="email" name="email" placeholder="@naver.com" autofocus><br>	
-	비밀번호<br>
-	<input type="text" name="password"><br>
-	비밀번호 재확인<br>
-	<input type="text" name="check password"><br>
-	이름<br>
-	<input type="text" name="username"><br>
-	생년월일<br>
-	<table>
-		<tr style=text-align:center>
-			<td><input type="text" name="year">
-			<td><select month>
-				<option value= 1> 1
-				<option value= 2> 2
-				<option value= 3> 3
-				<option value= 4> 4
-				<option value= 5> 5
-				<option value= 6> 6 
-				<option value= "default"selected>월
-			</select>
-			<td><input type="text" name="day">
-		</tr>
-	</table>
-	성별<br>
-	<select gender>
-		<option value= 남자>남
-		<option value= 여자>여
-		<option value= default>성별
-	</select><br>
-	본인확인 이메일(선택)<br>
-	<input type="text" name="username"><br>
-	휴대전화<br>
-	<input type="text" name="username"><br></p>
-	<p><a herf="/index.php :alert('회원 가입이 되었습니다.');">회원가입</a></p>
+	<h1 class="jungo"><img src=" " alt="G고나라"><h1>
+	<div class="container">
+		<div class="picture shape"><img src="" alt="그림 넣는 곳"></div>
+		<div class="product">상품명</div>
+		<div class="title">title<div>
 	</div>
-</form>
+<body>
 </body>
 </html>
