@@ -6,42 +6,92 @@
 	<title>HTML Forms</title>
 	<style>
 		body{background-color:white}
-		.container{
-			background-color:white;
+		#header{
+			text-align:left;
+			float:left;
+			background-color:black;
 		}
-		.picture{
+		#middle{
+			text-align:center;
+			float:center;
+			background-color: red;
+		}
+		#picture{
+			background-color: pink;
 			width: 40%;
-			height: 60%;
+			height: 70%;
 			padding :5%;
-			padding-bottom:30%;
+			padding-bottom :20%;
 			border: 2px solid black;
 			margin: 5%;
 			float:left;
 		}
-		.product{
+		#product{
+			background-color: yellow;
 			border: 1px solid black;
 			width: 30%;
 			height:20%;
-			padding: 3%;
+			padding: 2%;
 			margin :1%;
 			float:right;
+			margin-right: 3%;
+			margin-top: 5%;
 		}
-		.title{
+		#title{
 			border: 1px solid black;
 			width: 30%;
-			padding: 3%;
+			padding: 2%;
 			height:20%;
 			margin :1%;
+			margin-right: 3%;
+			float:right;
+		}
+		#number{
+			border: 1px solid black;
+			width: 30%;
+			padding: 2%;
+			height:20%;
+			margin :1%;
+			margin-right: 3%;
 			float:right;
 		}
 	</style>
 </head>
-	<h1 class="jungo"><img src="https://joun008.github.io/WebPractice/중고나라.png" alt="G고나라"><h1>
+	<div id="header"><img src=" https://joun008.github.io/WebPractice/logo.png"
+	 alt="G고나라" style="width: 130px;height:130px;" ></div>
+	<div id="middle"><img src=" https://joun008.github.io/WebPractice/중고나라.png"
+	style="width:300px;height:150px;"></div>
 	<div class="container">
-		<div class="picture shape"><img src="" alt="그림 넣는 곳"></div>
-		<div class="product">상품명</div>
-		<div class="title">title<div>
-	</div>
+		<div id="picture"><img src="" alt="그림 넣는 곳"></div>
+		<div id="product">상품명</br>
+			<input type="text" value="name" style="width:85% ;height:30px;" ><br/></div>
+		<div id="title">가격</br>
+			<form action="/action_page.php">
+			<input type="text" value="price" style="width:85% ;height:30px;"><br/>
+			</form>
+		</div>
+		<script>
+		a=0;
+		</script>
+		<div id= "number">갯수</br>
+			<form action="/action_page.php">
+			<select month>
+				<option a= 1> 1
+				<option a= 2> 2
+				<option a= 3> 3
+				<option a= 4> 4
+				<option a= 5> 5
+				<option a= 6> 6 
+				<option a= 7> 기타
+				<option a= 8 "default" selected>개
+			</select>
+			<script>
+			if(a==7)
+				<input type="text" value="" style="width:40%; height:30px;"><br/>
+			}
+			</script>
+			</form>
+		</div>
 <body>
 </body>
 </html>
