@@ -5,53 +5,56 @@
     <meta charset="UTF-8">
 	<title>HTML Forms</title>
 	<style>
-		body{background-color:white}
+		body{background-color:#ece6cc}
 		#header{
 			text-align:left;
 			float:left;
-			background-color:black;
+
 		}
 		#middle{
 			text-align:center;
 			float:center;
-			background-color: red;
 		}
-		#picture{
-			background-color: pink;
+		.container{
 			width: 40%;
 			height: 70%;
 			padding :5%;
-			padding-bottom :20%;
-			border: 2px solid black;
-			margin: 5%;
+			margin: 2%;
 			float:left;
+			sytle: position:relative;
+		}
+		#picture{
+			background-color:pink;
+			width: 50%;
+			height: 140%;
+			padding : 20%;
+			border: 2px solid black;
+			margin: 1%;
+			float:left;
+			margin-left:10%;
+		}
+		#sample{
+			margin-left:76%;
 		}
 		#product{
-			background-color: yellow;
-			border: 1px solid black;
 			width: 30%;
 			height:20%;
 			padding: 2%;
-			margin :1%;
 			float:right;
 			margin-right: 3%;
 			margin-top: 5%;
 		}
 		#title{
-			border: 1px solid black;
 			width: 30%;
 			padding: 2%;
 			height:20%;
-			margin :1%;
 			margin-right: 3%;
 			float:right;
 		}
 		#number{
-			border: 1px solid black;
 			width: 30%;
 			padding: 2%;
 			height:20%;
-			margin :1%;
 			margin-right: 3%;
 			float:right;
 		}
@@ -62,7 +65,15 @@
 	<div id="middle"><img src=" https://joun008.github.io/WebPractice/중고나라.png"
 	style="width:300px;height:150px;"></div>
 	<div class="container">
-		<div id="picture"><img src="" alt="그림 넣는 곳"></div>
+		<div id="picture">
+			<img src="" alt="그림 넣는 곳"></img>
+		</div>
+		<div id="sample">
+			<from>
+			<input type="file" name="upload_file" accept="image/*">
+			</from>
+		</div>
+	</div>
 		<div id="product">상품명</br>
 			<input type="text" value="name" style="width:85% ;height:30px;" ><br/></div>
 		<div id="title">가격</br>
@@ -70,28 +81,31 @@
 			<input type="text" value="price" style="width:85% ;height:30px;"><br/>
 			</form>
 		</div>
-		<script>
-		a=0;
+		<script language="javascript">
+		function numbercheck(){
+ 			i=document.join.month.selectedIndex // 선택항목의 인덱스 번호
+ 			var mail=document.join.month.options[i].value // 선택항목 value
+ 			document.join.screen.value=mail
+		}
 		</script>
-		<div id= "number">갯수</br>
-			<form action="/action_page.php">
-			<select month>
-				<option a= 1> 1
-				<option a= 2> 2
-				<option a= 3> 3
-				<option a= 4> 4
-				<option a= 5> 5
-				<option a= 6> 6 
-				<option a= 7> 기타
-				<option a= 8 "default" selected>개
+		<div id= "number">
+			<form name="join" action="join_post.php" method="post">
+			갯수
+			<select id="month" onChange="numbercheck()">
+			<option selected>
+			 	<option value="" selected disabled hidden>개</option>
+				<option value > 직접 입력</option>
+				<option value= "1"> 1</option>
+				<option value= "2"> 2</option>
+				<option value= "3"> 3</option>
+				<option value= "4"> 4</option>
+				<option value= "5"> 5</option>
+				<option value= "6"> 6 </option>
 			</select>
-			<script>
-			if(a==7)
-				<input type="text" value="" style="width:40%; height:30px;"><br/>
-			}
-			</script>
+			<input type="text" name="screen" style="width:30%; height:30px;">
+			&nbsp; 주문 날짜
+			<input type='date' name="주문" sytle="float:right;" />
 			</form>
-		</div>
 <body>
 </body>
 </html>
